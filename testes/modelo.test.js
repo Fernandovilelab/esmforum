@@ -34,7 +34,7 @@ test('Testando get_pergunta', () => {
   const perguntas = modelo.listar_perguntas();
   const pergunta = modelo.get_pergunta(perguntas[0].id_pergunta);
   expect(pergunta.texto).toBe('minha pergunta');
-})
+});
 
 test('Testando get_respostas', () => {
   modelo.cadastrar_pergunta('minha pergunta');
@@ -44,4 +44,4 @@ test('Testando get_respostas', () => {
   modelo.cadastrar_resposta(pergunta.id_pergunta, 'resposta 2');
   const respostas = modelo.get_respostas(pergunta.id_pergunta);
   expect(respostas.length).toBe(2);
-})
+});
